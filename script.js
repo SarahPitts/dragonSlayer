@@ -5,16 +5,17 @@ totalDamage = 0;
 
 while(slaying) {
     if (youHit) {
-        console.log ("congrats");
+        console.log ("you hit the dragon!");
         totalDamage += damageThisRound;
-        
         if (totalDamage >= 4) {
             console.log ("player slew the dragon")
             slaying = false;
         }
+        else {
+            console.log ("the dragon defeated you");
+            slaying = false;
+        }
     }
-    else {
-        console.log ("the dragon defeated you");
-    }
+    
     slaying = false;
 }
